@@ -1,0 +1,17 @@
+<!-- ベーステンプレート適応 -->
+{% extends 'base.html' %}
+<!-- ヘッダー情報のページタイトルを設定 -->
+{% block title %}Freema Shop{% endblock %}
+
+{% block contents %}
+
+<!-- タイトルテンプレートの読み込み -->
+{% include "freema_title.html" %}
+
+<!-- 投稿一覧テンプレートの読み込み -->
+{% include "freema_list.html" %}
+
+<!-- ページネーションの組み込み -->
+{% include "pagenation.html" %}
+
+{% endblock %}
