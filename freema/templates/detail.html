@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Freema Detail{% endblock %}
+{% block title %}Photo Detail{% endblock %}
 
 {% block contents %}
 <br>
@@ -30,9 +30,9 @@
         <a href="{% url 'freema:photo_delete' object.pk %}" class="btn btn-primary my-2">投稿を取りやめる</a>
         <!-- それ以外(ログインしているユーザーが出品者と違った場合)は、購入する -->
         {% else %}
-        <p><a href="{% url 'freema:index' %}">トップページへ</a></p>
         {% endif %}
-        </form>
+      </form>
+      <p><a href="{% url 'freema:index' %}">トップページへ</a></p>
 
     </div>
   </div>

@@ -137,7 +137,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'fko2447028@stu.o-hara.ac.jp' # 自分のメールアドレス
 EMAIL_HOST_PASSWORD = 'Syakunage0312' # 自分のアカウントのパスワード
 EMAIL_USE_TLS = True
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

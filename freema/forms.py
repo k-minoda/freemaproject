@@ -6,5 +6,4 @@ class PhotoPostForm(ModelForm):
         # モデルのクラス
         model = PhotoPost
         # フォームで使用するモデルのフィールドを指定
-        fields = ['category', 'title',  'comment', 'image1', 'image2']
-        # 'price' ,
+        fields = ['category', 'title', 'comment', 'image1', 'image2']

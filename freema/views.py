@@ -114,10 +114,6 @@ class PhotoDeleteView(DeleteView):
         return super().delete(request, *args, **kwargs)
 
 
-
-    
-
-
 class IndexList(ListView):
     template_name = 'get_queryset.html'
     paginate_by = 2
