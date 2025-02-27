@@ -9,15 +9,12 @@
       <!-- タイトル -->
       <h2>{{object.title}}</h2>
 
-      <!-- 価格 -->
-       <h3>¥{{ object.price }}</h3>
-
       <!-- コメント -->
       <p>{{object.comment}}</p>
 
       <br>
       <!-- 掲載日時 -->
-      <p>{{object.posted_at}}に出品</p>
+      <p>{{object.posted_at}}に投稿</p>
 
       <!-- 1枚目の写真 -->
       <p><img src="{{ object.image1.url }}"></img></p>
@@ -27,15 +24,14 @@
       <p><img src="{{ object.image2.url }}"></img></p>
       {% endif %}
 
-
-
+      <!-- ログインしているユーザーが出品者と同じだった場合、出品を取りやめる -->
       {% if request.user == object.user %}
       <form method="POST">
-        <a href="{% url 'freema:photo_delete' object.pk %}" class="btn btn-primary my-2">出品を取りやめる</a>
+        <a href="{% url 'freema:photo_delete' object.pk %}" class="btn btn-primary my-2">投稿を取りやめる</a>
+        <!-- それ以外(ログインしているユーザーが出品者と違った場合)は、購入する -->
         {% else %}
-        <form method="POST">
-          <a href="{% url 'freema:photo_purchase' object.pk %}" class="btn btn-primary my-2">購入する</a>
-          {% endif %}
+        <p><a href="{% url 'freema:index' %}">トップページへ</a></p>
+        {% endif %}
         </form>
 
     </div>

@@ -41,14 +41,6 @@ urlpatterns = [
          views.PhotoDeleteView.as_view(),
          name='photo_delete'
          ),
-
-    # 商品を購入
-    # photo/<Photo postsテーブルのid値>/purchase/にマッチング
-    # <int:pk>は辞書{pk: id値(int)}としてDetailViewに渡される
-    path('photo/<int:pk>/purchase/',
-         views.PhotoPurchase.as_view(),
-         name='photo_purchase'
-         ),
      
      path('get_queryset/',
          views.IndexList.as_view(),

@@ -14,12 +14,11 @@
           <!-- タイトルとボタンを出力するブロック -->
           <div class="card-body">
             <p class="card-text">{{record.title}}</p>
-            <p class="card-text">¥{{record.price}}</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
                 <!-- 詳細ページ表示ボタン -->
                 <button type="button" class="btn btn-sm btn-outline-secondary"
-                  onclick="location.href='{% url 'freema:photo_detail' record.pk %}'">商品を閲覧する</button>
+                  onclick="location.href='{% url 'freema:photo_detail' record.pk %}'">写真を閲覧する</button>
                 <!-- カテゴリページ表示ボタン -->
                 <button type="button" class="btn btn-sm btn-outline-secondary"
                   onclick="location.href='{% url 'freema:photos_cat' category=record.category.id %}'">
@@ -43,7 +42,7 @@
               content. This content is a little bit longer.</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">商品名</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">タイトル</button>
                 <button type="button" class="btn btn-sm btn-outline-secondary">カテゴリ</button>
               </div>
               <small class="text-muted">ユーザー名</small>

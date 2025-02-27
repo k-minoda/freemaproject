@@ -35,10 +35,6 @@ class PhotoPost(models.Model):
         max_length=200
     )
 
-    price = models.PositiveIntegerField(
-        verbose_name='価格',
-    )
-
     comment = models.TextField(
         verbose_name='コメント',
     )

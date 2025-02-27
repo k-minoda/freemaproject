@@ -8,7 +8,7 @@
         <div class="col offset-3">
             <form method="POST">
                 <br>
-                <p>出品を取り消してもよろしいですか？</p>
+                <p>投稿を取り消してもよろしいですか？</p>
                 {% csrf_token %}
                 <button class="btn-primary my-2" type="submit">取り消し</button>
                 <a href="{% url 'freema:photo_detail' object.pk %}" class="btn btn-secondary my-2">キャンセル</a>

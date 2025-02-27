@@ -114,16 +114,7 @@ class PhotoDeleteView(DeleteView):
         return super().delete(request, *args, **kwargs)
 
 
-class PhotoPurchase(DeleteView):
-    template_name = 'photo_purchase.html'
-    model = PhotoPost
 
-    # 処理完了後にマイページにリダイレクト
-    success_url = reverse_lazy('freema:mypage')
-
-    def delete(self, request, *args, **kwargs):
-        # スーパークラスのpurchase()を実行
-        return super().delete(request, *args, **kwargs)
     
 
 
